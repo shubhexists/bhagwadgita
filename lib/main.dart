@@ -1,6 +1,4 @@
 import 'package:bhagwadgita/Pages/ContentsPage/contentsPage.dart';
-import 'package:bhagwadgita/Pages/HomePage/homePage.dart';
-import 'package:bhagwadgita/Pages/Shloka%20Page/shlokaPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {

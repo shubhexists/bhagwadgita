@@ -31,7 +31,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           image: const DecorationImage(
             image: AssetImage(
-              '/home/jerry/bhagwadgita/bhagwadgita/assets/images/HomeScreenBackGround.jpg',
+              'assets/images/HomeScreenBackGround.jpg',
             ),
             fit: BoxFit.cover,
           ),
@@ -59,8 +59,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 1",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/VisadaYoga.jpg',
+              imageUrl: 'assets/images/CardImages/VisadaYoga.jpg',
               subtitle: "Visada Yoga",
               onPressed: () {
                 Navigator.push(
@@ -68,7 +67,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
                               courseImage: AssetImage(
-                                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/VisadaYoga.jpg'),
+                                  'assets/images/CardImages/VisadaYoga.jpg'),
                               courseInfo: 'Chapter 1',
                               courseName: 'Visada Yoga',
                               coursePrice: 'Shloka 1',
@@ -79,15 +78,15 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 2",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/SankhyaYoga.jpg',
+              imageUrl: 'assets/images/CardImages/SankhyaYoga.jpg',
               subtitle: " Sankhya Yoga ",
               onPressed: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage('/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/SankhyaYoga.jpg'),
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/SankhyaYoga.jpg'),
                               courseInfo: 'Chapter 2',
                               courseName: 'Sankhya Yoga',
                               coursePrice: 'Shloka 1',
@@ -98,15 +97,15 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 3",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/KarmaYoga.jpeg',
+              imageUrl: 'assets/images/CardImages/KarmaYoga.jpeg',
               subtitle: "Karma Yoga ",
               onPressed: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage('/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/KarmaYoga.jpeg'),
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/KarmaYoga.jpeg'),
                               courseInfo: 'Chapter 3',
                               courseName: 'Karma Yoga',
                               coursePrice: 'Shloka 1',
@@ -117,15 +116,15 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 4",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/jnanaYoga.png',
+              imageUrl: 'assets/images/CardImages/jnanaYoga.png',
               subtitle: "Jnana Yoga",
               onPressed: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage('/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/jnanaYoga.png'),
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/jnanaYoga.png'),
                               courseInfo: 'Chapter 4',
                               courseName: 'Jnana Yoga',
                               coursePrice: 'Shloka 1',
@@ -136,15 +135,15 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 5",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/KarmaVairagya.jpg',
+              imageUrl: 'assets/images/CardImages/KarmaVairagya.jpg',
               subtitle: "Karma Vairagya Yoga",
               onPressed: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage('/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/KarmaVairagya.jpg'),
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/KarmaVairagya.jpg'),
                               courseInfo: '',
                               courseName: '',
                               coursePrice: '',
@@ -155,8 +154,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 6",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/AbhayasaYoga.jpg',
+              imageUrl: 'assets/images/CardImages/AbhayasaYoga.jpg',
               subtitle: "Abhyasa Yoga",
               onPressed: () {
                 Navigator.push(
@@ -174,8 +172,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 7",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/ParamahamsaVijnanaYoga.jpeg',
+              imageUrl: 'assets/images/CardImages/ParamahamsaVijnanaYoga.jpeg',
               subtitle: "Paramhamsa Vijnana Yoga",
               onPressed: () {
                 Navigator.push(
@@ -193,8 +190,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 8",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/AksharaParabrahmaYoga.jpeg',
+              imageUrl: 'assets/images/CardImages/AksharaParabrahmaYoga.jpeg',
               subtitle: "Aksara-Parabrahman Yoga",
               onPressed: () {
                 Navigator.push(
@@ -212,8 +208,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 9",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/RajaVidyaGuhya.jpeg',
+              imageUrl: 'assets/images/CardImages/RajaVidyaGuhya.jpeg',
               subtitle: "Raja-Vidya-Guhya Yoga",
               onPressed: () {
                 Navigator.push(
@@ -231,8 +226,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 10",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/vibhutiVistaraYoga.jpg',
+              imageUrl: 'assets/images/CardImages/vibhutiVistaraYoga.jpg',
               subtitle: "Vibhuti-Vistara-Yoga",
               onPressed: () {
                 Navigator.push(
@@ -250,8 +244,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 11",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/VisvarupaDarsanaYoga.jpg',
+              imageUrl: 'assets/images/CardImages/VisvarupaDarsanaYoga.jpg',
               subtitle: "Visvarupa-Darsana Yoga",
               onPressed: () {
                 Navigator.push(
@@ -269,8 +262,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 12",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/BhaktiYoga.jpeg',
+              imageUrl: 'assets/images/CardImages/BhaktiYoga.jpeg',
               subtitle: "Bhakti Yoga",
               onPressed: () {
                 Navigator.push(
@@ -289,7 +281,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           CardFb2(
               text: "Chapter 13",
               imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/KsetraKsetrajnaVibhaganaYoga.jpeg',
+                  'assets/images/CardImages/KsetraKsetrajnaVibhaganaYoga.jpeg',
               subtitle: "Ksetra-Ksetrajna Vibhaga Yoga",
               onPressed: () {
                 Navigator.push(
@@ -307,8 +299,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 14",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/GunatrayaVibhagaYoga.jpeg',
+              imageUrl: 'assets/images/CardImages/GunatrayaVibhagaYoga.jpeg',
               subtitle: "Gunatraya-Vibhaga Yoga",
               onPressed: () {
                 Navigator.push(
@@ -326,8 +317,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 15",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/PurushottamYoga.jpeg',
+              imageUrl: 'assets/images/CardImages/PurushottamYoga.jpeg',
               subtitle: "Purusottama Yoga",
               onPressed: () {
                 Navigator.push(
@@ -346,7 +336,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           CardFb2(
               text: "Chapter 16",
               imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/DaivasuraSampadVibhagaYoga.jpeg',
+                  'assets/images/CardImages/DaivasuraSampadVibhagaYoga.jpeg',
               subtitle: "Daivasura-Sampad-Vibhaga Yoga",
               onPressed: () {
                 Navigator.push(
@@ -365,7 +355,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           CardFb2(
               text: "Chapter 17",
               imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/ShraddhaTrayaVibhagaYoga.jpeg',
+                  'assets/images/CardImages/ShraddhaTrayaVibhagaYoga.jpeg',
               subtitle: "Sraddhatraya-Vibhaga Yoga",
               onPressed: () {
                 Navigator.push(
@@ -383,8 +373,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
           ),
           CardFb2(
               text: "Chapter 18",
-              imageUrl:
-                  '/home/jerry/bhagwadgita/bhagwadgita/assets/images/CardImages/MoksaOpadesaYoga.jpg',
+              imageUrl: 'assets/images/CardImages/MoksaOpadesaYoga.jpg',
               subtitle: "Moksa-Opadesa Yoga",
               onPressed: () {
                 Navigator.push(
