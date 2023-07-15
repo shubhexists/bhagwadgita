@@ -14,23 +14,24 @@ Future _readJsonFile(String filePath) async {
   return jsonData;
 }
 
-class CatalogScreen extends StatefulWidget {
+class CatalogScreenHindi extends StatefulWidget {
   final String userName;
-  const CatalogScreen({Key? key, required this.userName}) : super(key: key);
+  const CatalogScreenHindi({Key? key, required this.userName})
+      : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
-  _CatalogScreenState createState() => _CatalogScreenState();
+  _CatalogScreenHindiState createState() => _CatalogScreenHindiState();
 }
 
-class _CatalogScreenState extends State<CatalogScreen> {
+class _CatalogScreenHindiState extends State<CatalogScreenHindi> {
   double? screenWidth;
 
   @override
   Widget build(BuildContext context) {
     screenWidth ??= MediaQuery.of(context).size.width;
     return FutureBuilder(
-      future: _readJsonFile("assets/json_data/dataset_english.json"),
+      future: _readJsonFile("assets/json_data/dataset_hindi.json"),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(

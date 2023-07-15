@@ -1,4 +1,6 @@
 // ignore_for_file: file_names, must_be_immutable
+import 'package:bhagwadgita/Pages/ContentsPage/contentsPage.dart';
+import 'package:bhagwadgita/Pages/ContentsPage/contentsPageHindi.dart';
 import 'package:bhagwadgita/Pages/HomePage/Features/inputfield.dart';
 import 'package:bhagwadgita/Pages/HomePage/Features/nextButton.dart';
 import 'package:flutter/material.dart';
@@ -95,10 +97,30 @@ class _LanguagePageState extends State<LanguagePage> {
                 ),
               ),
             ),
-            Padding(padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width/3.9,700,8,8),
-            child: GradientButtonFb1(onPressed:(){
-              
-            } ,text: "Next",),)
+            Padding(
+              padding: EdgeInsets.fromLTRB(
+                  MediaQuery.of(context).size.width / 3.9, 700, 8, 8),
+              child: GradientButtonFb1(
+                onPressed: () {
+                  if (dropdownvalue == 'English') {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CatalogScreen(
+                                  userName: inputController.text,
+                                )));
+                  } else {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CatalogScreenHindi(
+                                  userName: inputController.text,
+                                )));
+                  }
+                },
+                text: "Next",
+              ),
+            )
           ],
         ),
       ),
