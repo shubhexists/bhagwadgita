@@ -1,5 +1,6 @@
 // ignore_for_file: file_names, must_be_immutable
 import 'package:bhagwadgita/Pages/HomePage/Features/inputfield.dart';
+import 'package:bhagwadgita/Pages/HomePage/Features/nextButton.dart';
 import 'package:flutter/material.dart';
 
 class LanguagePage extends StatefulWidget {
@@ -70,6 +71,7 @@ class _LanguagePageState extends State<LanguagePage> {
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 320, 8, 8),
               child: Container(
+                width: MediaQuery.of(context).size.width,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
@@ -88,12 +90,15 @@ class _LanguagePageState extends State<LanguagePage> {
                       dropdownvalue = newValue!;
                     });
                   },
-                  icon: const Icon(Icons.arrow_drop_down),
-                  iconSize: 42,
+                  isExpanded: true,
                   underline: const SizedBox(),
                 ),
               ),
-            )
+            ),
+            Padding(padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width/3.9,700,8,8),
+            child: GradientButtonFb1(onPressed:(){
+              
+            } ,text: "Next",),)
           ],
         ),
       ),

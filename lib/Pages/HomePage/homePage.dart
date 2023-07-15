@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:bhagwadgita/Pages/HomePage/Features/GetStartedButton.dart';
+import 'package:bhagwadgita/Pages/HomePage/LanguagePage.dart';
 import 'package:flutter/material.dart';
 
 import '../ContentsPage/contentsPage.dart';
@@ -79,7 +80,7 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const CatalogScreen()));
+                          builder: (context) => const LanguagePage()));
                 })
           ],
         ),

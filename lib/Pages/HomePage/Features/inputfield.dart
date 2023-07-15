@@ -21,7 +21,7 @@ class EmailInputFb2 extends StatelessWidget {
             style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 13, 246, 9).withOpacity(.9)),
+                color: const Color.fromARGB(255, 13, 246, 9).withOpacity(.9)),
           ),
           const SizedBox(
             height: 8,
@@ -36,12 +36,11 @@ class EmailInputFb2 extends StatelessWidget {
                   color: Colors.grey.withOpacity(.1)),
             ]),
             child: TextField(
-              
               controller: inputController,
               onChanged: (value) {
-                //Do something wi
+
               },
-              keyboardType: TextInputType.emailAddress,
+              keyboardType: TextInputType.name,
               style: const TextStyle(fontSize: 14, color: Colors.black),
               decoration: InputDecoration(
                 label: const Text("Name"),
