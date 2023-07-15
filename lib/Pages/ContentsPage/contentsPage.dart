@@ -6,7 +6,13 @@ import 'dart:io';
 import 'package:bhagwadgita/Pages/ContentsPage/Features/cards.dart';
 import 'package:bhagwadgita/Pages/Shloka%20Page/shlokaPage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
+Future _readJsonFile(String filePath) async {
+  File file = File(filePath);
+  String jsonContent = await file.readAsString();
+  dynamic jsonData = json.decode(jsonContent);
+  return jsonData;
+}
 
 class CatalogScreen extends StatefulWidget {
   const CatalogScreen({Key? key}) : super(key: key);
@@ -18,12 +24,6 @@ class CatalogScreen extends StatefulWidget {
 
 class _CatalogScreenState extends State<CatalogScreen> {
   double? screenWidth;
-
-  Future<String> _readJsonFile(String filePath) async {
-    File file = File(filePath);
-    String content = await file.readAsString();
-    return content;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -86,12 +86,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/VisadaYoga.jpg'),
-                                    courseInfo: 'Chapter 1',
+                                    courseInfo: '1',
                                     courseName: 'Visada Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -105,12 +106,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/SankhyaYoga.jpg'),
-                                    courseInfo: 'Chapter 2',
+                                    courseInfo: '2',
                                     courseName: 'Sankhya Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -124,12 +126,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/KarmaYoga.jpeg'),
-                                    courseInfo: 'Chapter 3',
+                                    courseInfo: '3',
                                     courseName: 'Karma Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -143,12 +146,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/jnanaYoga.png'),
-                                    courseInfo: 'Chapter 4',
+                                    courseInfo: '4',
                                     courseName: 'Jnana Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -162,12 +166,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/KarmaVairagya.jpg'),
-                                    courseInfo: 'Chapter 5',
+                                    courseInfo: '5',
                                     courseName: 'Karma Vairagya Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -181,12 +186,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/AbhayasaYoga.jpg'),
-                                    courseInfo: 'Chapter 6',
+                                    courseInfo: '6',
                                     courseName: 'Abhyasa Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -201,12 +207,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/ParamahamsaVijnanaYoga.jpeg'),
-                                    courseInfo: 'Chapter 7',
+                                    courseInfo: '7',
                                     courseName: 'Paramhamsa Vijnana Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -221,12 +228,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/AksharaParabrahmaYoga.jpeg'),
-                                    courseInfo: 'Chapter 8',
+                                    courseInfo: '8',
                                     courseName: 'Aksara-Parabrahman Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -240,12 +248,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/RajaVidyaGuhya.jpeg'),
-                                    courseInfo: 'Chapter 9',
+                                    courseInfo: '9',
                                     courseName: 'Raja-Vidya-Guhya Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -259,12 +268,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/vibhutiVistaraYoga.jpg'),
-                                    courseInfo: 'Chapter 10',
+                                    courseInfo: '10',
                                     courseName: 'Vibhuti-Vistara-Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -279,12 +289,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/VisvarupaDarsanaYoga.jpg'),
-                                    courseInfo: 'Chapter 11',
+                                    courseInfo: '11',
                                     courseName: 'Visvarupa-Darsana Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -298,12 +309,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/BhaktiYoga.jpeg'),
-                                    courseInfo: 'Chapter 12',
+                                    courseInfo: '12',
                                     courseName: 'Bhakti Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -318,12 +330,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/KsetraKsetrajnaVibhaganaYoga.jpeg'),
-                                    courseInfo: 'Chapter 13',
+                                    courseInfo: '13',
                                     courseName: 'Ksetra-Ksetrajna Vibhaga Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -338,12 +351,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/GunatrayaVibhagaYoga.jpeg'),
-                                    courseInfo: 'Chapter 14',
+                                    courseInfo: '14',
                                     courseName: 'Gunatraya-Vibhaga Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -357,12 +371,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/PurushottamYoga.jpeg'),
-                                    courseInfo: 'Chapter 15',
+                                    courseInfo: '15',
                                     courseName: 'Purusottama Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -377,12 +392,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/DaivasuraSampadVibhagaYoga.jpeg'),
-                                    courseInfo: 'Chapter 16',
+                                    courseInfo: '16',
                                     courseName: 'Daivasura-Sampad-Vibhaga Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -397,12 +413,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/ShraddhaTrayaVibhagaYoga.jpeg'),
-                                    courseInfo: 'Chapter 17',
+                                    courseInfo: '17',
                                     courseName: "Sraddhatraya-Vibhaga Yoga",
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     }),
                 const SizedBox(
@@ -416,12 +433,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ShlokaScreen(
-                                    courseImage: AssetImage(
+                              builder: (context) => ShlokaScreen(
+                                    courseImage: const AssetImage(
                                         'assets/images/CardImages/MoksaOpadesaYoga.jpg'),
-                                    courseInfo: 'Chapter 18',
+                                    courseInfo: '18',
                                     courseName: 'Moksa-Opadesa Yoga',
-                                    coursePrice: 'Shloka 1',
+                                    coursePrice: 'Shloka',
+                                    content: snapshot.data,
                                   )));
                     })
               ],

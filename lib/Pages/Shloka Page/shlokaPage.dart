@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, unused_field, avoid_print, override_on_non_overriding_member
+// ignore_for_file: file_names, unused_field, avoid_print, override_on_non_overriding_member, prefer_typing_uninitialized_variables
 import 'package:bhagwadgita/Pages/Shloka%20Page/features/buttons.dart';
 import 'package:flutter/material.dart';
 
@@ -7,13 +7,15 @@ class ShlokaScreen extends StatefulWidget {
   final AssetImage courseImage;
   final String courseInfo;
   final String coursePrice;
+  final content;
 
   const ShlokaScreen(
       {Key? key,
       required this.courseName,
       required this.courseImage,
       required this.courseInfo,
-      required this.coursePrice})
+      required this.coursePrice,
+      required this.content})
       : super(key: key);
 
   @override
@@ -21,6 +23,7 @@ class ShlokaScreen extends StatefulWidget {
 }
 
 class _ShlokaScreenState extends State<ShlokaScreen> {
+  int currentShloka = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,9 +50,6 @@ class _ShlokaScreenState extends State<ShlokaScreen> {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  // child: Image(
-                  //   image: courseImage,
-                  // ),
                 ),
               ),
             ),
@@ -85,12 +85,12 @@ class _ShlokaScreenState extends State<ShlokaScreen> {
                       Text(widget.courseName,
                           style: const TextStyle(
                               fontSize: 24, fontWeight: FontWeight.bold)),
-                      Text(widget.courseInfo,
+                      Text("Chapter ${widget.courseInfo}",
                           style: TextStyle(fontSize: 16, color: MyTheme.grey)),
                       MyTheme.largeVerticalPadding,
                       Row(
                         children: [
-                          Text(widget.coursePrice,
+                          Text("${widget.coursePrice} $currentShloka",
                               style: const TextStyle(
                                   fontSize: 22, fontWeight: FontWeight.bold)),
                           Expanded(
@@ -118,18 +118,41 @@ class _ShlokaScreenState extends State<ShlokaScreen> {
                       ),
                       MyTheme.mediumVerticalPadding,
                       Text(
-                        "",
-                        style: TextStyle(fontSize: 16),
+                        widget.content["verses"][widget.courseInfo]
+                            [currentShloka.toString()]["text"],
+                        style: const TextStyle(fontSize: 16),
                       ),
                       MyTheme.mediumVerticalPadding,
+                      const Text(
+                        "Meaning",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
+                      ),
+                      MyTheme.mediumVerticalPadding,
+                      Text(
+                        widget.content["verses"][widget.courseInfo]
+                            [currentShloka.toString()]["meaning"],
+                        style: const TextStyle(fontSize: 16),
+                      ),
+                      MyTheme.mediumVerticalPadding,
+                      const SizedBox(
+                        height: 15,
+                      ),
                       Row(
                         children: [
                           const Spacer(
                             flex: 2,
                           ),
-                          GradientButtonFb4(
-                            onPressed: () {},
-                            text: "Prev",
+                          Visibility(
+                            visible: (currentShloka == 1) ? false : true,
+                            child: GradientButtonFb4(
+                              onPressed: () {
+                                setState(() {
+                                  currentShloka--;
+                                });
+                              },
+                              text: "Prev",
+                            ),
                           ),
                           const SizedBox(
                             width: 20,
@@ -141,20 +164,20 @@ class _ShlokaScreenState extends State<ShlokaScreen> {
                           const SizedBox(
                             width: 20,
                           ),
-                          GradientButtonFb4(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ShlokaScreen(
-                                            courseImage: const AssetImage(
-                                                'assets/images/CardImages/VisadaYoga.jpg'),
-                                            courseInfo: widget.courseInfo,
-                                            courseName: 'Visada Yoga',
-                                            coursePrice: 'Shloka 2',
-                                          )));
-                            },
-                            text: "Next",
+                          Visibility(
+                            visible: (currentShloka ==
+                                    widget.content["chapters"]
+                                        [widget.courseInfo]["verses_count"])
+                                ? false
+                                : true,
+                            child: GradientButtonFb4(
+                              onPressed: () {
+                                setState(() {
+                                  currentShloka++;
+                                });
+                              },
+                              text: "Next",
+                            ),
                           ),
                           const Spacer(
                             flex: 2,
