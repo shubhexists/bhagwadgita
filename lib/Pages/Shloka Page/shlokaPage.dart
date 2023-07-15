@@ -93,27 +93,31 @@ class _ShlokaScreenState extends State<ShlokaScreen> {
                           Text("${widget.coursePrice} $currentShloka",
                               style: const TextStyle(
                                   fontSize: 22, fontWeight: FontWeight.bold)),
-                          Expanded(
-                            child: Column(
-                              children: [
-                                const Text("Progress: 100%"),
-                                Container(
-                                  margin: const EdgeInsets.fromLTRB(
-                                      32.0, 4.0, 32.0, 8.0),
-                                  height: 10,
-                                  child: ClipRRect(
-                                    borderRadius: const BorderRadius.all(
-                                        Radius.circular(10)),
-                                    child: LinearProgressIndicator(
-                                      value: 1,
-                                      valueColor: AlwaysStoppedAnimation<Color>(
-                                          MyTheme.progressColor),
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          )
+                          const SizedBox(width: 30,),
+                          SizedBox(
+                            width: 200,
+                              child: Column(
+                            children: [
+                              Text(
+                                "Progress : ${( (currentShloka /
+                                    widget.content["chapters"]
+                                        [widget.courseInfo]["verses_count"])*100).round()} %",
+                                style: const TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(
+                                height: 5,
+                              ),
+                              LinearProgressIndicator(
+                                value: currentShloka /
+                                    widget.content["chapters"]
+                                        [widget.courseInfo]["verses_count"],
+                                backgroundColor: MyTheme.courseCardColor,
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                    MyTheme.progressColor),
+                              ),
+                            ],
+                          ))
                         ],
                       ),
                       MyTheme.mediumVerticalPadding,
