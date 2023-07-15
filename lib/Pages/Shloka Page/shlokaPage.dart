@@ -1,7 +1,8 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, unused_field, avoid_print, override_on_non_overriding_member
+import 'package:bhagwadgita/Pages/Shloka%20Page/features/buttons.dart';
 import 'package:flutter/material.dart';
 
-class ShlokaScreen extends StatelessWidget {
+class ShlokaScreen extends StatefulWidget {
   final String courseName;
   final AssetImage courseImage;
   final String courseInfo;
@@ -15,6 +16,11 @@ class ShlokaScreen extends StatelessWidget {
       required this.coursePrice})
       : super(key: key);
 
+  @override
+  State<ShlokaScreen> createState() => _ShlokaScreenState();
+}
+
+class _ShlokaScreenState extends State<ShlokaScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +43,7 @@ class ShlokaScreen extends StatelessWidget {
                       color: Colors.black,
                     ),
                     image: DecorationImage(
-                      image: courseImage,
+                      image: widget.courseImage,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -76,15 +82,15 @@ class ShlokaScreen extends StatelessWidget {
                         ),
                       ),
                       MyTheme.mediumVerticalPadding,
-                      Text(courseName,
+                      Text(widget.courseName,
                           style: const TextStyle(
                               fontSize: 24, fontWeight: FontWeight.bold)),
-                      Text(courseInfo,
+                      Text(widget.courseInfo,
                           style: TextStyle(fontSize: 16, color: MyTheme.grey)),
                       MyTheme.largeVerticalPadding,
                       Row(
                         children: [
-                          Text(coursePrice,
+                          Text(widget.coursePrice,
                               style: const TextStyle(
                                   fontSize: 22, fontWeight: FontWeight.bold)),
                           Expanded(
@@ -111,8 +117,8 @@ class ShlokaScreen extends StatelessWidget {
                         ],
                       ),
                       MyTheme.mediumVerticalPadding,
-                      const Text(
-                        "Learn the basics of lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                      Text(
+                        "",
                         style: TextStyle(fontSize: 16),
                       ),
                       MyTheme.mediumVerticalPadding,
@@ -121,14 +127,34 @@ class ShlokaScreen extends StatelessWidget {
                           const Spacer(
                             flex: 2,
                           ),
-                          Expanded(
-                            flex: 4,
-                            child: ElevatedButton(
-                                onPressed: () {},
-                                child: const Text(
-                                  "Graduate",
-                                  style: TextStyle(fontWeight: FontWeight.w500),
-                                )),
+                          GradientButtonFb4(
+                            onPressed: () {},
+                            text: "Prev",
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          GradientButtonFb4(
+                            onPressed: () {},
+                            text: "💜",
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          GradientButtonFb4(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ShlokaScreen(
+                                            courseImage: const AssetImage(
+                                                'assets/images/CardImages/VisadaYoga.jpg'),
+                                            courseInfo: widget.courseInfo,
+                                            courseName: 'Visada Yoga',
+                                            coursePrice: 'Shloka 2',
+                                          )));
+                            },
+                            text: "Next",
                           ),
                           const Spacer(
                             flex: 2,

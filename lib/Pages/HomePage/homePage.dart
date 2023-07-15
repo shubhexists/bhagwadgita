@@ -3,6 +3,8 @@
 import 'package:bhagwadgita/Pages/HomePage/Features/GetStartedButton.dart';
 import 'package:flutter/material.dart';
 
+import '../ContentsPage/contentsPage.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -71,7 +73,14 @@ class HomePage extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 18),
-            InvertedButtonFb2(text: 'Start Reading', onPressed: () {})
+            InvertedButtonFb2(
+                text: 'Start Reading',
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const CatalogScreen()));
+                })
           ],
         ),
       ],

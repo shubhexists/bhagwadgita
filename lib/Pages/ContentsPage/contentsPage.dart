@@ -144,9 +144,9 @@ class _CatalogScreenState extends State<CatalogScreen> {
                         builder: (context) => const ShlokaScreen(
                               courseImage: AssetImage(
                                   'assets/images/CardImages/KarmaVairagya.jpg'),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseInfo: 'Chapter 5',
+                              courseName: 'Karma Vairagya Yoga',
+                              coursePrice: 'Shloka 1',
                             )));
               }),
           const SizedBox(
@@ -161,10 +161,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage(''),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/AbhayasaYoga.jpg'),
+                              courseInfo: 'Chapter 6',
+                              courseName: 'Abhyasa Yoga',
+                              coursePrice: 'Shloka 1',
                             )));
               }),
           const SizedBox(
@@ -179,10 +180,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage(''),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/ParamahamsaVijnanaYoga.jpeg'),
+                              courseInfo: 'Chapter 7',
+                              courseName: 'Paramhamsa Vijnana Yoga',
+                              coursePrice: 'Shloka 1',
                             )));
               }),
           const SizedBox(
@@ -197,10 +199,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage(''),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/AksharaParabrahmaYoga.jpeg'),
+                              courseInfo: 'Chapter 8',
+                              courseName: 'Aksara-Parabrahman Yoga',
+                              coursePrice: 'Shloka 1',
                             )));
               }),
           const SizedBox(
@@ -215,10 +218,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage(''),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/RajaVidyaGuhya.jpeg'),
+                              courseInfo: 'Chapter 9',
+                              courseName: 'Raja-Vidya-Guhya Yoga',
+                              coursePrice: 'Shloka 1',
                             )));
               }),
           const SizedBox(
@@ -233,10 +237,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage(''),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/vibhutiVistaraYoga.jpg'),
+                              courseInfo: 'Chapter 10',
+                              courseName: 'Vibhuti-Vistara-Yoga',
+                              coursePrice: 'Shloka 1',
                             )));
               }),
           const SizedBox(
@@ -251,10 +256,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage(''),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/VisvarupaDarsanaYoga.jpg'),
+                              courseInfo: 'Chapter 11',
+                              courseName: 'Visvarupa-Darsana Yoga',
+                              coursePrice: 'Shloka 1',
                             )));
               }),
           const SizedBox(
@@ -269,10 +275,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage(''),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/BhaktiYoga.jpeg'),
+                              courseInfo: 'Chapter 12',
+                              courseName: 'Bhakti Yoga',
+                              coursePrice: 'Shloka 1',
                             )));
               }),
           const SizedBox(
@@ -288,10 +295,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage(''),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/KsetraKsetrajnaVibhaganaYoga.jpeg'),
+                              courseInfo: 'Chapter 13',
+                              courseName: 'Ksetra-Ksetrajna Vibhaga Yoga',
+                              coursePrice: 'Shloka 1',
                             )));
               }),
           const SizedBox(
@@ -306,10 +314,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage(''),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/GunatrayaVibhagaYoga.jpeg'),
+                              courseInfo: 'Chapter 14',
+                              courseName: 'Gunatraya-Vibhaga Yoga',
+                              coursePrice: 'Shloka 1',
                             )));
               }),
           const SizedBox(
@@ -324,10 +333,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage(''),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/PurushottamYoga.jpeg'),
+                              courseInfo: 'Chapter 15',
+                              courseName: 'Purusottama Yoga',
+                              coursePrice: 'Shloka 1',
                             )));
               }),
           const SizedBox(
@@ -343,10 +353,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage(''),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/DaivasuraSampadVibhagaYoga.jpeg'),
+                              courseInfo: 'Chapter 16',
+                              courseName: 'Daivasura-Sampad-Vibhaga Yoga',
+                              coursePrice: 'Shloka 1',
                             )));
               }),
           const SizedBox(
@@ -362,10 +373,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage(''),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/ShraddhaTrayaVibhagaYoga.jpeg'),
+                              courseInfo: 'Chapter 17',
+                              courseName: "Sraddhatraya-Vibhaga Yoga",
+                              coursePrice: 'Shloka 1',
                             )));
               }),
           const SizedBox(
@@ -380,10 +392,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ShlokaScreen(
-                              courseImage: AssetImage(''),
-                              courseInfo: '',
-                              courseName: '',
-                              coursePrice: '',
+                              courseImage: AssetImage(
+                                  'assets/images/CardImages/MoksaOpadesaYoga.jpg'),
+                              courseInfo: 'Chapter 18',
+                              courseName: 'Moksa-Opadesa Yoga',
+                              coursePrice: 'Shloka 1',
                             )));
               })
         ],
