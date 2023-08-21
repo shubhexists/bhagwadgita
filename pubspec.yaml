@@ -60,7 +60,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/json_data/
+    - assets/json_data/dataset_english.json
+    - assets/json_data/dataset_hindi.json
     - assets/images/CardImages/
     - assets/images/
 

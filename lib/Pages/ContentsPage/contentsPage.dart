@@ -1,4 +1,4 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, void_checks
 
 import 'dart:convert';
 import 'dart:io';
@@ -6,13 +6,6 @@ import 'dart:io';
 import 'package:bhagwadgita/Pages/ContentsPage/Features/cards.dart';
 import 'package:bhagwadgita/Pages/Shloka%20Page/shlokaPage.dart';
 import 'package:flutter/material.dart';
-
-Future _readJsonFile(String filePath) async {
-  File file = File(filePath);
-  String jsonContent = await file.readAsString();
-  dynamic jsonData = json.decode(jsonContent);
-  return jsonData;
-}
 
 class CatalogScreen extends StatefulWidget {
   final String userName;
@@ -25,6 +18,14 @@ class CatalogScreen extends StatefulWidget {
 
 class _CatalogScreenState extends State<CatalogScreen> {
   double? screenWidth;
+  var jsonData;
+  Future _readJsonFile(String filePath) async{
+    File file = File(filePath);
+    String jsonContent = await file.readAsString();
+    jsonData = json.decode(jsonContent);
+    print(jsonData);
+    return jsonData;
+  }
 
   @override
   Widget build(BuildContext context) {
